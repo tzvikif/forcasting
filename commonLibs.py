@@ -39,3 +39,8 @@ from fpppy.utils import plot_series
 from scipy.stats import pearsonr
 import statsmodels.api as sm
 from statsmodels.graphics.tsaplots import plot_acf
+
+if __name__ == "__main__":
+    pbs = pd.read_csv("data/PBS_unparsed.csv")
+    pbs["Month"] = pd.to_datetime(pbs["Month"])
+    pbs.head()
